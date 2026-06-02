@@ -1,0 +1,18 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // Default-deny catch-all
+    match /{document=**} {
+      allow read, write: if false;
+    }
+
+    // Submissions collection
+    match /submissions/{submissionId} {
+      allow create: if request.resource.data.whyAccept is string 
+                   && request.resource.data.activity is string
+                   && request.resource.data.dinners is list
+                   && request.resource.data.whisper is string;
+      allow read: if true; // Let Mannik read submissions on the dashboard
+    }
+  }
+}

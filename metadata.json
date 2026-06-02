@@ -1,0 +1,6 @@
+{
+  "name": "Valentine Proposal Card",
+  "description": "An incredibly cute, interactive proposal website and date planner personalized for Mannik & Angela, with multi-option theme selections, customized whispers, and interactive real-time dashboards.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

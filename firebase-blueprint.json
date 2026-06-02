@@ -1,0 +1,39 @@
+{
+  "entities": {
+    "submissions": {
+      "title": "Submissions",
+      "description": "Custom girlfriend proposal date configurations submitted by Angela",
+      "type": "object",
+      "properties": {
+        "whyAccept": {
+          "type": "string",
+          "description": "Explanation of why Angela accepted the proposal"
+        },
+        "activity": {
+          "type": "string",
+          "description": "The selected date activity choice"
+        },
+        "dinners": {
+          "type": "array",
+          "description": "The selected list of dinner choices"
+        },
+        "whisper": {
+          "type": "string",
+          "description": "Sweetest and wildest whisper notes"
+        },
+        "submittedAt": {
+          "type": "string",
+          "format": "date-time",
+          "description": "The exact time Angela submitted the responses"
+        }
+      },
+      "required": ["whyAccept", "activity", "dinners", "whisper", "submittedAt"]
+    }
+  },
+  "firestore": {
+    "submissions/{submissionId}": {
+      "schema": "submissions",
+      "description": "Collection of girlfriend proposal date planning submissions"
+    }
+  }
+}
